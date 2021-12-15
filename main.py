@@ -21,7 +21,8 @@ if __name__ == '__main__':
                 t *= 2
                 pygame.time.set_timer(MYEVENTTYPE, t)
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 5 and life_is_going:
-                t //= 2
+                if t // 2 != 0:
+                    t //= 2
                 pygame.time.set_timer(MYEVENTTYPE, t)
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
